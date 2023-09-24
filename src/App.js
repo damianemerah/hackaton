@@ -51,8 +51,8 @@ import bg3 from "./img/Purple-Lens-Flare-PNG-2.png";
 import bg4 from "./img/Purple-Lens-Flare-PNG-3.png";
 import bg5 from "./img/Purple-Lens-Flare-PNG-4.png";
 import bg6 from "./img/Purple-Lens-Flare-PNG-5.png";
-// import bg7 from "./img/Purple-Lens-Flare-PNG-6.png";
-// import bg8 from "./img/Purple-Lens-Flare-PNG-7.png";
+import bg7 from "./img/Purple-Lens-Flare-PNG-6.png";
+import bg8 from "./img/Purple-Lens-Flare-PNG-7.png";
 import bg9 from "./img/Purple-Lens-Flare-PNG-8.png";
 import bg10 from "./img/Purple-Lens-Flare-PNG-9.png";
 import bg11 from "./img/Purple-Lens-Flare-PNG-10.png";
@@ -78,7 +78,7 @@ function HomePage() {
         <img className="star star2" src={star2} alt="star" />
         <img className="star star2-2" src={star2} alt="star" />
 
-        <div className="container header__content">
+        <div className="header__content">
           <p className="text__desc">
             <span>Igniting a Revolution in </span>
             <span className="text__desc-sub">
@@ -90,14 +90,23 @@ function HomePage() {
           </p>
           <div className="header__text-box">
             <div className="header__text">
-              <div className="header__h1">
-                <img className="bulb" src={bulb} alt="bulb designer" />
-                <img className="fire" src={fire} alt="fire design" />
-                <img className="chain" src={chain} alt="chain design" />
+              <div className="header--1">
                 <h1>
-                  <span>getlinked Tech</span>
+                  getlinked Te
                   <span>
-                    Hackathon <span className="header__text--num">1.0</span>
+                    c
+                    <img className="bulb" src={bulb} alt="bulb designer" />
+                  </span>
+                  h
+                </h1>
+              </div>
+              <div className="header--2">
+                <h1>
+                  Hackathon{" "}
+                  <span className="header__text--num">
+                    1.0
+                    <img className="fire" src={fire} alt="fire design" />
+                    <img className="chain" src={chain} alt="chain design" />
                   </span>
                 </h1>
               </div>
@@ -124,10 +133,8 @@ function HomePage() {
               </div>
             </div>
             <div className="header__img">
-              <div className="img">
-                <img src={smartMan} alt="Smart man" />
-                <img src={circleStar} alt="Smart world" />
-              </div>
+              <img src={smartMan} alt="Smart man" />
+              <img className="circleStar" src={circleStar} alt="Smart world" />
             </div>
           </div>
         </div>
@@ -148,14 +155,14 @@ function HomePage() {
 function AboutPage() {
   return (
     <section className="about">
-      <img className="star star3" src={star3} alt="Star design" />
-      <img className="star star4" src={star4} alt="Star design" />
-      <img className="arrow" src={arrow} alt="arrow design" />
       <div className="container about__content">
         <div className="about__img">
+          <img className="arrow" src={arrow} alt="arrow design" />
+          <img className="star star3" src={star3} alt="Star design" />
           <img src={bigIdea} alt="The big Idea" />
         </div>
         <div className="about__text">
+          <img className="star star4" src={star4} alt="Star design" />
           <h2>
             <span>Introduction to getlinked</span>
             <span>tech Hackathon 1.0</span>
@@ -177,10 +184,9 @@ function AboutPage() {
 function RulesPage() {
   return (
     <section className="rules">
-      <img className="star star5" src={star1} alt="star" />
-      <img className="star star6" src={star2} alt="star" />
       <div className="container rules__content">
         <div className="rules__text">
+          <img className="star star6" src={star2} alt="star" />
           <h2>
             <span>Rules and</span>
             <span>Guidelines</span>
@@ -195,6 +201,7 @@ function RulesPage() {
           </p>
         </div>
         <div className="rules__img">
+          <img className="star star5" src={star1} alt="star" />
           <img src={ladyImage} alt="A lady reading" />
         </div>
       </div>
@@ -205,39 +212,16 @@ function RulesPage() {
 function FeaturesPage() {
   return (
     <section className="features">
-      <img className="star star7" src={star1} alt="star" />
-      <img className="star star8" src={star2} alt="star" />
-      <img className="star star9" src={star4} alt="star" />
       <div className="container features__content">
         <div className="features__img">
+          <img className="star star8" src={star2} alt="star" />
+          <img className="star star9" src={star4} alt="star" />
           <img className="ellipse" src={ellipse} alt="ellipse" />
-          {/* <svg
-            className="ellipse"
-            width="134"
-            height="134"
-            viewBox="0 0 134 134"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="67" cy="67" r="67" fill="url(#paint0_linear_70_6)" />
-            <defs>
-              <linearGradient
-                id="paint0_linear_70_6"
-                x1="134"
-                y1="67"
-                x2="3.69183"
-                y2="67"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#8F01FE" />
-                <stop offset="1" stop-color="#FF2674" />
-              </linearGradient>
-            </defs>
-          </svg> */}
-
           <img src={people} alt="People" />
         </div>
         <div className="features__text">
+          <img className="star star7" src={star1} alt="star" />
+
           <h2>
             <span>Judging Criteria</span>
             <span>Key attributes</span>
@@ -340,13 +324,10 @@ function FAQ() {
   ];
   return (
     <section className="faq">
-      <img className="star star10" src={star1} alt="star design" />
-      <img className="star star11" src={star2} alt="star design" />
-      <img className="star star12" src={star3} alt="star design" />
-      <img className="star star13" src={star3} alt="star design" />
-      <img className="star star14" src={star4} alt="star design" />
       <div className="container faq__content">
         <div className="faq__text">
+          <img className="star star14" src={star4} alt="star design" />
+
           <h2>
             <span>Frequently Ask</span>
             <span>Questions</span>
@@ -375,6 +356,10 @@ function FAQ() {
           <img src={q1} alt="icon" className="ques q1" />
           <img src={q2} alt="icon" className="ques q2" />
           <img src={q3} alt="icon" className="ques q3" />
+          <img className="star star10" src={star1} alt="star design" />
+          <img className="star star11" src={star2} alt="star design" />
+          <img className="star star12" src={star3} alt="star design" />
+          <img className="star star13" src={star3} alt="star design" />
           <img src={thinkMan} alt="A Man thinking" />
         </div>
       </div>
@@ -385,9 +370,6 @@ function FAQ() {
 function Timeline() {
   return (
     <section className="timeline">
-      <img className="star star15" src={star1} alt="" />
-      <img className="star star16" src={star2} alt="" />
-      <img className="star star17" src={star4} alt="" />
       <div className="container timeline__content">
         <div className="timeline__text">
           <h2>
@@ -400,8 +382,12 @@ function Timeline() {
           </p>
         </div>
         <div className="timeline__dates">
+          <img className="star star15" src={star1} alt="" />
+          <img className="star star16" src={star2} alt="" />
+          <img className="star star17" src={star4} alt="" />
           <div className="timeline__row">
             <div className="timeline__row-content timeline__row--left">
+              <h3 className="show--sm">November 18, 2023</h3>
               <h3>Hackathon Announcement</h3>
               <p>
                 <span>
@@ -415,16 +401,17 @@ function Timeline() {
             <div className="timeline__row-num">
               <p className="timeline__first-after">1</p>
             </div>
-            <h3 className="timeline__row--right">November 18, 2023</h3>
+            <h3 className="timeline__row--right hide-sm">November 18, 2023</h3>
           </div>
           <div className="timeline__row">
-            <h3 className="timeline__row--left">November 18, 2023</h3>
+            <h3 className="timeline__row--left hide-sm">November 18, 2023</h3>
 
             <div className="timeline__row-num">
               <p className="">2</p>
             </div>
 
             <div className="timeline__row-content timeline__row--right">
+              <h3 className="show--sm">November 18, 2023</h3>
               <h3>Teams Registration begins</h3>
               <p>
                 <span>Interested teams can now show their interest in the</span>
@@ -436,6 +423,7 @@ function Timeline() {
           </div>
           <div className="timeline__row">
             <div className="timeline__row-content timeline__row--left">
+              <h3 className="show--sm">November 18, 2023</h3>
               <h3>Teams Registration ends</h3>
               <p>
                 <span>Interested Participants are no longer Allowed to</span>
@@ -445,16 +433,17 @@ function Timeline() {
             <div className="timeline__row-num">
               <p>3</p>
             </div>
-            <h3 className="timeline__row--right">November 18, 2023</h3>
+            <h3 className="timeline__row--right hide-sm">November 18, 2023</h3>
           </div>
           <div className="timeline__row">
-            <h3 className="timeline__row--left">November 18, 2023</h3>
+            <h3 className="timeline__row--left hide-sm">November 18, 2023</h3>
 
             <div className="timeline__row-num">
               <p className="">4</p>
             </div>
 
             <div className="timeline__row-content timeline__row--right">
+              <h3 className="show--sm">November 18, 2023</h3>
               <h3>Announcement of the accepted teams and ideas</h3>
               <p>
                 <span>
@@ -466,6 +455,7 @@ function Timeline() {
           </div>
           <div className="timeline__row">
             <div className="timeline__row-content timeline__row--left">
+              <h3 className="show--sm">November 18, 2023</h3>
               <h3>Getlinked Hackathon 1.0 Offically Begins</h3>
               <p>
                 <span>Accepted teams can now proceed to build their</span>
@@ -475,16 +465,17 @@ function Timeline() {
             <div className="timeline__row-num">
               <p>5</p>
             </div>
-            <h3 className="timeline__row--right">November 18, 2023</h3>
+            <h3 className="timeline__row--right hide-sm">November 18, 2023</h3>
           </div>
           <div className="timeline__row">
-            <h3 className="timeline__row--left">November 18, 2023</h3>
+            <h3 className="timeline__row--left hide-sm">November 18, 2023</h3>
 
             <div className="timeline__row-num">
               <p className="">6</p>
             </div>
 
             <div className="timeline__row-content timeline__row--right">
+              <h3 className="show--sm">November 18, 2023</h3>
               <h3>Demo Day</h3>
               <p>
                 <span>
@@ -802,6 +793,8 @@ function App() {
         <img className="bg bg4" src={bg4} alt="background designer" />
         <img className="bg bg5" src={bg5} alt="background designer" />
         <img className="bg bg6" src={bg6} alt="background designer" />
+        <img className="bg bg7" src={bg7} alt="background designer" />
+        <img className="bg bg8" src={bg8} alt="background designer" />
         <img className="bg bg9" src={bg9} alt="background" />
         <img className="bg bg10" src={bg10} alt="background" />
         <img className="bg bg11" src={bg11} alt="background" />
