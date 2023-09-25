@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
@@ -56,6 +56,26 @@ import bg8 from "./img/Purple-Lens-Flare-PNG-7.png";
 import bg9 from "./img/Purple-Lens-Flare-PNG-8.png";
 import bg10 from "./img/Purple-Lens-Flare-PNG-9.png";
 import bg11 from "./img/Purple-Lens-Flare-PNG-10.png";
+import menuClose from "./img/menu-close.png";
+
+function MenuIcon() {
+  return (
+    <svg
+      className="menu-icon"
+      width="19"
+      height="14"
+      viewBox="0 0 19 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        id="Vector"
+        d="M1.35714 0H8.14286C8.50279 0 8.84799 0.1475 9.1025 0.410051C9.35701 0.672601 9.5 1.0287 9.5 1.4C9.5 1.7713 9.35701 2.1274 9.1025 2.38995C8.84799 2.6525 8.50279 2.8 8.14286 2.8H1.35714C0.997206 2.8 0.652012 2.6525 0.397498 2.38995C0.142984 2.1274 0 1.7713 0 1.4C0 1.0287 0.142984 0.672601 0.397498 0.410051C0.652012 0.1475 0.997206 0 1.35714 0ZM10.8571 11.2H17.6429C18.0028 11.2 18.348 11.3475 18.6025 11.6101C18.857 11.8726 19 12.2287 19 12.6C19 12.9713 18.857 13.3274 18.6025 13.5899C18.348 13.8525 18.0028 14 17.6429 14H10.8571C10.4972 14 10.152 13.8525 9.8975 13.5899C9.64298 13.3274 9.5 12.9713 9.5 12.6C9.5 12.2287 9.64298 11.8726 9.8975 11.6101C10.152 11.3475 10.4972 11.2 10.8571 11.2ZM1.35714 5.6H17.6429C18.0028 5.6 18.348 5.7475 18.6025 6.01005C18.857 6.2726 19 6.6287 19 7C19 7.3713 18.857 7.7274 18.6025 7.98995C18.348 8.2525 18.0028 8.4 17.6429 8.4H1.35714C0.997206 8.4 0.652012 8.2525 0.397498 7.98995C0.142984 7.7274 0 7.3713 0 7C0 6.6287 0.142984 6.2726 0.397498 6.01005C0.652012 5.7475 0.997206 5.6 1.35714 5.6Z"
+        fill="white"
+      />
+    </svg>
+  );
+}
 
 // Define page components
 function HomePage() {
@@ -79,13 +99,11 @@ function HomePage() {
         <img className="star star2-2" src={star2} alt="star" />
 
         <div className="header__content">
-          <p className="text__desc">
+          <p className="container text__desc">
             <span>Igniting a Revolution in </span>
             <span className="text__desc-sub">
               HR Innovation
-              <span>
-                <img src={vector4} alt="Vector_4" />
-              </span>
+              <img src={vector4} alt="Vector_4" />
             </span>
           </p>
           <div className="header__text-box">
@@ -282,7 +300,7 @@ function Dropdown({ question, answer, isOpen, onClick }) {
         classNames="dropdown__ans"
         unmountOnExit
       >
-        <p className={`dropdown__ans ${isOpen ? "open" : ""}`}>{answer}</p>
+        <p className={`dropdown__ans`}>{answer}</p>
       </CSSTransition>
     </>
   );
@@ -636,23 +654,25 @@ function Policy() {
               participating in our event, you consent to the practices described
               in this policy.
             </p>
-            <h2>Licensing Policy</h2>
-            <p className="policy__text--bold">
-              Here are terms of our Standard License:
-            </p>
-            <div className="policy__list">
-              <img src={listTerm} alt="Check icon" />
-              <p>
-                The Standard License grants you a non-exclusive right to
-                navigate and register for our event
+            <div className="policy__details-list">
+              <h2>Licensing Policy</h2>
+              <p className="policy__text--bold">
+                Here are terms of our Standard License:
               </p>
-            </div>
-            <div className="policy__list">
-              <img src={listTerm} alt="Check icon" />
-              <p>
-                You are licensed to use the item available at any free source
-                sites, for your project developement
-              </p>
+              <div className="policy__list">
+                <img src={listTerm} alt="Check icon" />
+                <p>
+                  The Standard License grants you a non-exclusive right to
+                  navigate and register for our event
+                </p>
+              </div>
+              <div className="policy__list">
+                <img src={listTerm} alt="Check icon" />
+                <p>
+                  You are licensed to use the item available at any free source
+                  sites, for your project developement
+                </p>
+              </div>
             </div>
             <div className="policy__btn">
               <Link to="#" className="register">
@@ -751,32 +771,72 @@ function ContactPage() {
 
 // Define navigation component
 function Navigation() {
+  const nodeRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
+  if (isOpen) {
+    console.log("open");
+  }
   return (
-    <nav className="">
+    <nav>
       <div className="nav container">
         <Link to="/" className="logo">
           <span className="logo--1">get</span>
           <span className="logo--2">linked</span>
         </Link>
-        <ul>
-          <li>
-            <Link to="#">Timeline</Link>
-          </li>
-          <li>
-            <Link to="#">Overview</Link>
-          </li>
-          <li>
-            <Link to="#">FAQs</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-        <li>
+        <MenuIcon onClick={() => setIsOpen(!isOpen)} />
+
+        <CSSTransition
+          nodeRef={nodeRef}
+          in={isOpen}
+          timeout={400}
+          classNames="open"
+          unmountOnExit
+        >
+          <div className="nav__links nav__links--sm" ref={nodeRef}>
+            <img
+              onClick={() => setIsOpen(!isOpen)}
+              className="menu-close"
+              src={menuClose}
+              alt="menu close button"
+            />
+            <ul>
+              <li>
+                <Link to="#">Timeline</Link>
+              </li>
+              <li>
+                <Link to="#">Overview</Link>
+              </li>
+              <li>
+                <Link to="#">FAQs</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+            </ul>
+            <Link to="/register" className="register">
+              Register
+            </Link>
+          </div>
+        </CSSTransition>
+        <div className="nav__links nav__links--big">
+          <ul>
+            <li>
+              <Link to="#">Timeline</Link>
+            </li>
+            <li>
+              <Link to="#">Overview</Link>
+            </li>
+            <li>
+              <Link to="#">FAQs</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
           <Link to="/register" className="register">
             Register
           </Link>
-        </li>
+        </div>
       </div>
     </nav>
   );

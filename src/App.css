@@ -68,6 +68,11 @@ nav {
   margin-left: auto;
 }
 
+.nav__links {
+  display: flex;
+  align-items: center;
+}
+
 .nav ul li {
   margin-left: 5.6rem;
   font-size: 1.6rem;
@@ -90,7 +95,7 @@ a:visited {
 }
 
 .nav .register {
-  margin-left: auto;
+  margin-left: 12rem;
 }
 
 header {
@@ -100,18 +105,20 @@ header {
 
 .text__desc {
   color: #fff;
-  font-size: 36px;
+  font-size: 3.6rem;
   font-style: italic;
   font-weight: 700;
   text-align: right;
   margin-right: 5.5rem;
   position: relative;
+  white-space: nowrap;
 }
 
 .text__desc img {
   position: absolute;
-  top: 130%;
+  top: 144%;
   right: 0;
+  width: 100%;
   transform: translateY(-50%);
 }
 
@@ -219,11 +226,11 @@ header .register {
 
 .star,
 .q1,
-.q2,
-.q3,
 .bulb,
 .fire,
 .chain,
+.q2,
+.q3,
 .bg,
 .arrow,
 .ellipse {
@@ -261,19 +268,19 @@ header .register {
 }
 
 .bulb {
-  top: -79%;
+  top: -57%;
   left: 17.5%;
 }
 
 .fire {
-  top: 9%;
+  top: -9%;
   left: 182%;
   z-index: 30 !important;
 }
 
 .chain {
   top: -11%;
-  left: 94.5%;
+  left: 100%;
   z-index: 30 !important;
 }
 
@@ -480,7 +487,7 @@ header .register {
 }
 
 .bg4 {
-  top: 21%;
+  top: 25%;
   right: 0;
   z-index: -1;
 }
@@ -497,13 +504,15 @@ header .register {
   z-index: -1;
 }
 .bg7 {
-  top: 0;
-  left: 0;
+  top: 63%;
+  left: -4%;
+  z-index: -1;
 }
 
 .bg8 {
-  top: 25%;
+  top: 67%;
   right: 0;
+  z-index: -1;
 }
 
 .bg9 {
@@ -617,7 +626,7 @@ header .register {
 .features__text p,
 .faq__text p .prize__text p {
   font-size: 1.4rem;
-  line-height: 2.75rem;
+  line-height: 27.5px;
 }
 
 .about__img,
@@ -682,7 +691,7 @@ header .register {
 .dropdown__ans {
   font-size: 1.3rem;
   padding: 0 2rem 2rem 2rem;
-  line-height: 2.4rem;
+  line-height: 24px;
 }
 
 .dropdown__ans-enter {
@@ -727,7 +736,7 @@ header .register {
 
 .timeline__text-sub {
   text-align: center;
-  line-height: 2.4136rem;
+  line-height: 24.136px;
 }
 
 .timeline__dates {
@@ -779,7 +788,7 @@ header .register {
 }
 
 .timeline__row p {
-  line-height: 2.7344rem;
+  line-height: 27.344px;
 }
 
 .timeline__row--left {
@@ -884,8 +893,7 @@ header .register {
 }
 
 .first__prize {
-  width: 21.2rem;
-  height: 34.7rem;
+  padding-top: 18rem;
   border: 1px solid var(--primary-color);
   background: rgba(144, 58, 255, 0.12);
   transform: translateY(2rem);
@@ -893,8 +901,7 @@ header .register {
 
 .second__prize,
 .third__prize {
-  height: 29.6rem;
-  width: 21.2rem;
+  padding-top: 12rem;
   border: 1px solid #d434fe;
   background: rgba(212, 52, 254, 0.12);
 }
@@ -904,7 +911,12 @@ header .register {
 .third__prize img {
   position: absolute;
   top: 0;
+  width: 100%;
   transform: translateY(-50%);
+}
+
+.first__prize img {
+  transform: scale(1.5) translateY(-30%);
 }
 
 .first__prize h2,
@@ -963,7 +975,7 @@ header .register {
   font-size: 3.2rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 2.75rem;
+  line-height: 27.5px;
   margin-bottom: 2.2rem;
 }
 
@@ -973,7 +985,7 @@ header .register {
   color: #fff;
   font-size: 14px;
   font-weight: 400;
-  line-height: 2.75rem;
+  line-height: 27.5px;
 }
 
 .partners__logo-box {
@@ -1005,13 +1017,13 @@ header .register {
 
 .partners__logo div img {
   display: block;
+  /* width: 100%; */
 }
 
 .border--1,
 .border--2,
 .border--1__vert {
   position: relative;
-  padding: 10px;
 }
 
 .border--2::before,
@@ -1026,7 +1038,7 @@ header .register {
 .border--1__vert::before {
   right: 50%;
   bottom: 0;
-  width: 25.7298rem;
+  width: 80%;
   height: 0.4rem;
   background-color: var(--secondary-color);
   transform: translateX(50%);
@@ -1037,7 +1049,7 @@ header .register {
   right: 0;
   top: 50%;
   width: 0.4rem;
-  height: 11.2476rem;
+  height: 70%;
   background-color: var(--secondary-color);
   transform: translateY(-50%);
 }
@@ -1052,16 +1064,15 @@ header .register {
 }
 
 .policy {
-  margin-top: 17rem;
-  padding-bottom: 17rem;
-  padding-top: 6.2rem;
+  padding-bottom: 11.2rem;
+  padding-top: 11.2rem;
   position: relative;
   z-index: 10;
 }
 .policy__text-sub--1 {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1.4rem;
-  line-height: 2.75rem;
+  line-height: 27.5px;
   display: block;
   margin-bottom: 3rem;
 }
@@ -1147,6 +1158,8 @@ header .register {
   display: flex;
   justify-content: space-around;
   padding-bottom: 6rem;
+  position: relative;
+  z-index: 10;
 }
 
 .footer__content > *:not(:last-child) {
@@ -1246,13 +1259,98 @@ header .register {
   text-align: center;
 }
 
+.menu-icon {
+  display: none;
+}
+
+.nav__links--sm {
+  display: none;
+}
+
 @media only screen and (max-width: 56.25em) {
-  .hide-sm {
+  .hide-sm,
+  .nav__links--big {
     display: none !important;
   }
-  .nav {
-    display: none;
+
+  .menu-icon {
+    display: block;
   }
+
+  .menu-icon:hover,
+  .menu-close:hover {
+    transform: scale(1.1);
+  }
+
+  .menu-close {
+    position: absolute;
+    top: 8%;
+    right: 10%;
+  }
+
+  .nav__links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    border: 0.5px solid rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(30px);
+    padding: 90px 70px 110px 50px;
+    /* transform: scale(0);
+    opacity: 0;
+    visibility: hidden; */
+  }
+
+  .open-enter,
+  .open-exit-active {
+    transform: translateX(100%);
+    /* transform: scale(0); */
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .open-exit-active {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .open-enter-active,
+  .open-exit {
+    transform: translateX(-100%);
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+
+  .open-enter-active {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav__links ul {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .nav__links .register {
+    margin: 0;
+    margin-top: 3rem;
+  }
+
+  .nav__links ul li {
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+
   .container {
     padding: 0 7rem;
   }
@@ -1262,6 +1360,7 @@ header .register {
     text-align: center;
     padding: 0 7rem;
   }
+
   .header__text-box {
     display: block;
     text-align: center;
@@ -1362,6 +1461,19 @@ header .register {
     text-align: center;
   }
 
+  .policy__content {
+    display: block;
+    text-align: center;
+  }
+
+  .policy__details-list {
+    text-align: left;
+  }
+
+  .policy__details-list h2 {
+    font-size: 13px;
+  }
+
   .prize__text-box {
     display: block !important;
     padding-right: 0;
@@ -1374,12 +1486,119 @@ header .register {
 
   .prize__cup {
     margin-right: 0;
-    margin-bottom: 11rem;
+    margin-bottom: 6rem;
   }
 
-  .first__prize,
+  .partners__logo div img {
+    width: 100%;
+  }
+
+  .policy__details {
+    margin-bottom: 28rem;
+    margin-right: 0;
+  }
+
+  .footer__content {
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .footer__content > * {
+    margin-right: 0 !important;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .bulb,
+  .fire,
+  .chain {
+    width: 100% !important;
+  }
+
+  h1 {
+    font-size: 32px !important;
+  }
+
+  .text__desc {
+    font-size: 16px;
+  }
+
+  .register {
+    font-size: 14px;
+  }
+
+  .header__text p {
+    font-size: 13px;
+  }
+
+  .time__num {
+    font-size: 48px;
+  }
+
+  .about__text h2,
+  .partners__text h2,
+  .rules__text h2,
+  .features__text h2,
+  .faq__text h2,
+  .prize__text h2,
+  .policy__text h2,
+  .timeline h2 {
+    font-size: 20px;
+  }
+
+  .about__text p,
+  .rules__text p,
+  .features__text p span {
+    font-size: 13px;
+  }
+
+  .faq__text p,
+  .prize__text p,
+  .features__text p,
+  .timeline p,
+  .timeline h3 {
+    font-size: 12px;
+  }
+
+  .first__prize h2 span,
+  .footer__links ul li,
+  .second__prize h2 span,
+  .third__prize h2 span,
+  .footer__links-icon p,
+  .footer__contact p,
+  .footer__term,
+  .policy p {
+    font-size: 12px !important;
+  }
+
+  .first__prize {
+    padding-top: 85px;
+  }
+
   .second__prize,
   .third__prize {
-    width: auto;
+    padding-top: 60px;
+  }
+
+  .partners__text-sub,
+  .footer__about-text {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 28px;
+  }
+
+  .nav .logo {
+    font-size: 15px;
+  }
+
+  .footer__logo {
+    font-size: 20px !important;
+  }
+
+  .footer__links h3,
+  .footer__contact h3 {
+    font-size: 14px;
   }
 }
