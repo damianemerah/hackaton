@@ -244,7 +244,7 @@ header .register {
   left: 16%;
 }
 .q2 {
-  top: -11%;
+  top: -16%;
   left: 33%;
 }
 .q3 {
@@ -1282,13 +1282,29 @@ header .register {
     transform: scale(1.1);
   }
 
+  .star25 {
+    top: 13%;
+    left: 12%;
+  }
+
+  .star24 {
+    top: 86%;
+    left: 55%;
+    z-index: -1;
+  }
+
+  .star30 {
+    top: 14%;
+    left: 40%;
+  }
+
   .menu-close {
     position: absolute;
     top: 8%;
     right: 10%;
   }
 
-  .nav__links {
+  .nav__links--sm {
     position: absolute;
     top: 0;
     right: 0;
@@ -1302,33 +1318,26 @@ header .register {
     border: 0.5px solid rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(30px);
     padding: 90px 70px 110px 50px;
-    /* transform: scale(0);
+  }
+
+  .open-enter {
     opacity: 0;
-    visibility: hidden; */
-  }
-
-  .open-enter,
-  .open-exit-active {
-    transform: translateX(100%);
-    /* transform: scale(0); */
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  .open-exit-active {
-    transition: all 0.3s ease-in-out;
-  }
-
-  .open-enter-active,
-  .open-exit {
-    transform: translateX(-100%);
-    transform: scale(1);
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 0s;
+    transform: scale(0.9);
   }
 
   .open-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .open-exit {
+    opacity: 1;
+  }
+
+  .open-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
     transition: all 0.3s ease-in-out;
   }
 
@@ -1515,6 +1524,20 @@ header .register {
   .fire,
   .chain {
     width: 100% !important;
+  }
+
+  .star2-2 {
+    top: 6%;
+    left: 80%;
+  }
+
+  .star,
+  .chain,
+  .fire,
+  .q1,
+  .q2,
+  .q3 {
+    transform: scale(0.6);
   }
 
   h1 {

@@ -58,7 +58,7 @@ import bg10 from "./img/Purple-Lens-Flare-PNG-9.png";
 import bg11 from "./img/Purple-Lens-Flare-PNG-10.png";
 import menuClose from "./img/menu-close.png";
 
-function MenuIcon() {
+function MenuIcon({ onClick }) {
   return (
     <svg
       className="menu-icon"
@@ -67,6 +67,7 @@ function MenuIcon() {
       viewBox="0 0 19 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onClick={onClick}
     >
       <path
         id="Vector"
@@ -773,9 +774,7 @@ function ContactPage() {
 function Navigation() {
   const nodeRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  if (isOpen) {
-    console.log("open");
-  }
+
   return (
     <nav>
       <div className="nav container">
@@ -788,7 +787,7 @@ function Navigation() {
         <CSSTransition
           nodeRef={nodeRef}
           in={isOpen}
-          timeout={400}
+          timeout={300}
           classNames="open"
           unmountOnExit
         >
@@ -818,6 +817,7 @@ function Navigation() {
             </Link>
           </div>
         </CSSTransition>
+
         <div className="nav__links nav__links--big">
           <ul>
             <li>
